@@ -9,7 +9,7 @@ This project is a SwiftUI example demonstrating how to handle camera permission 
 
 This example is created to demonstrate the usage of the [grand_access](https://github.com/The-Igor/grand-access) library.
 
-##Features
+## Features
 
 - [x] Request camera permission using the [grand_access](https://github.com/The-Igor/grand-access) library.
 - [x] Display an alert if the camera permission is not granted.
