@@ -8,17 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var progress : Progress = .idle
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            Color.brown.ignoresSafeArea()
+            ScanButton(
+                progress: $progress,
+                fontType: .largeTitle,
+                weight: .thin,
+                width: 150,
+                tint: .yellow
+            ){
+                Color.indigo.overlay {
+                    Text("Scanner")
+                        .font(.system(size: 78))
+                        .foregroundColor(.white)
+                }.ignoresSafeArea()
+                    .onTapGesture {
+                        progress = .finished
+                    }
+            }
         }
-        .padding()
+        
     }
 }
 
-#Preview {
-    ContentView()
-}
