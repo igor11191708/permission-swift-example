@@ -15,6 +15,7 @@
 		787362B82C3160AC00341ECC /* ScanButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787362B72C3160AC00341ECC /* ScanButton.swift */; };
 		787362BC2C3162F900341ECC /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787362BB2C3162F900341ECC /* Progress.swift */; };
 		787362BF2C316D0000341ECC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 787362BE2C316D0000341ECC /* README.md */; };
+		78A045B92C3191220037A921 /* grand_access.gif in Resources */ = {isa = PBXBuildFile; fileRef = 78A045B82C3191220037A921 /* grand_access.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		787362B72C3160AC00341ECC /* ScanButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanButton.swift; sourceTree = "<group>"; };
 		787362BB2C3162F900341ECC /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
 		787362BE2C316D0000341ECC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		78A045B82C3191220037A921 /* grand_access.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = grand_access.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 		7873629A2C31602000341ECC = {
 			isa = PBXGroup;
 			children = (
+				78A045B72C3190ED0037A921 /* img */,
 				787362BE2C316D0000341ECC /* README.md */,
 				787362A52C31602000341ECC /* permission-swift-example */,
 				787362A42C31602000341ECC /* Products */,
@@ -92,6 +95,14 @@
 				787362B72C3160AC00341ECC /* ScanButton.swift */,
 			);
 			path = ui;
+			sourceTree = "<group>";
+		};
+		78A045B72C3190ED0037A921 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				78A045B82C3191220037A921 /* grand_access.gif */,
+			);
+			path = img;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				787362BF2C316D0000341ECC /* README.md in Resources */,
+				78A045B92C3191220037A921 /* grand_access.gif in Resources */,
 				787362AE2C31602200341ECC /* Preview Assets.xcassets in Resources */,
 				787362AB2C31602200341ECC /* Assets.xcassets in Resources */,
 			);

@@ -13,7 +13,7 @@ This example is created to demonstrate the usage of the [grand access](https://g
 - [x] Present a full-screen scanner view when permission is granted.
 - [x] Customize the button appearance with various properties like system image, font type, weight, width, and tint color.
 
- ![simulate locations](https://github.com/The-Igor/grand-access/blob/main/img/grand_access.gif)
+ ![simulate locations](https://github.com/The-Igor/grand-access/blob/main/img/permission-swift-example.gif)
 
 ## License
 
