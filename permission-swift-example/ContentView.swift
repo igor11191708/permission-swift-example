@@ -25,10 +25,13 @@ struct ContentView: View {
                     Text("Scanner")
                         .font(.system(size: 78))
                         .foregroundColor(.white)
-                }.ignoresSafeArea()
-                    .onTapGesture {
-                        progress = .finished
-                    }
+                }
+                .ignoresSafeArea()
+                .onTapGesture {
+                    progress = .finished
+                    // Handle finish and then set to .idle
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: { progress = .idle })
+                }
             }
         }
         
