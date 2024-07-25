@@ -16,6 +16,7 @@ struct ScanButton<Content: View>: View {
     
     // MARK: - Config
     @Binding public var fromScanner: Progress  // Binding to the scanner progress state
+    @State private var previousFromScanner: Progress // Holds the previous value of fromScanner
     let systemName: String                     // System image name for the button
     let fontType: Font                         // Font type for the button label
     let weight: Font.Weight                    // Font weight for the button label
@@ -35,6 +36,7 @@ struct ScanButton<Content: View>: View {
         @ViewBuilder scannerView: @escaping () -> Content
     ) {
         self._fromScanner = fromScanner
+        self._previousFromScanner = State(initialValue: fromScanner.wrappedValue)
         self.systemName = systemName
         self.fontType = fontType
         self.weight = weight
@@ -46,8 +48,11 @@ struct ScanButton<Content: View>: View {
     var body: some View {
         scanButton
             .modifier(GrandAccessModifier(title: titleAlert, message: messageAlert, showingAlert: $showingAlert))
-            .onChange(of: fromScanner) { _, newValue in
+            .onReceive([fromScanner].publisher.first()) { newValue in
                 handleProgressChange(newValue)
+            }
+            .onAppear {
+                previousFromScanner = fromScanner
             }
     }
     
@@ -97,12 +102,14 @@ struct ScanButton<Content: View>: View {
         }
     }
     
-    
     /// Handle changes in the scanner progress
     /// - Parameter newValue: Progress state value
     private func handleProgressChange(_ newValue: Progress) {
-        if newValue == .finished {
-            doScan = false
+        if previousFromScanner != newValue {
+            if newValue == .finished {
+                doScan = false
+            }
+            previousFromScanner = newValue
         }
     }
 }
