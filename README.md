@@ -1,7 +1,5 @@
 # Permission SwiftUI Example
 
-[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FThe-Igor%2Fgrand-access%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/The-Igor/grand-access) [![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FThe-Igor%2Fgrand-access%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/The-Igor/grand-access)
-
 This project is a SwiftUI example demonstrating how to handle camera permission and scanning functionality in an iOS application. The project utilizes the `grand_access` library to manage permissions.
 
 This example is created to demonstrate the usage of the [grand access](https://github.com/The-Igor/grand-access) library.
